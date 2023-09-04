@@ -22,22 +22,8 @@ Builder.registerComponent(
 );
 
 Builder.registerComponent(
-  dynamic(() => import("./components/Hero/Titles")),
+  dynamic(() => import("./components/Hero/HeroTitles")),
   {
     name: "HeroTitles",
-  }
-);
-
-Builder.registerComponent(
-  dynamic(() => import("./components/Underhero/Underhero")),
-  {
-    name: "Underhero",
-  }
-);
-
-Builder.registerComponent(
-  dynamic(() => import("./components/FirstSlider/FirstSlider")),
-  {
-    name: "FirstSlider",
   }
 );
