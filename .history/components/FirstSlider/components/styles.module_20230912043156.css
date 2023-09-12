@@ -1,0 +1,17 @@
+.workBadge {
+    font-size: 14px!important;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px!important;
+    padding-right: 8px!important;
+    font-weight: 300!important;
+    background-color: #41CE8E!important;
+}
+
+.workBox {
+    cursor: pointer;
+}
+
+.sliderBackground {
+    background: linear-gradient(180deg, #41CE8E 50%, #F6F7F9 30%);
+}

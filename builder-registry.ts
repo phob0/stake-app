@@ -41,3 +41,17 @@ Builder.registerComponent(
     name: "FirstSlider",
   }
 );
+
+Builder.registerComponent(
+  dynamic(() => import("./components/FirstSlider/components/Carousel")),
+  {
+    name: "FirstSliderCarousel",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/FirstSlider/components/Controller")),
+  {
+    name: "FirstSliderController",
+  }
+);
