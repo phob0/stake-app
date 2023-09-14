@@ -53,74 +53,78 @@ function Controller() {
                 <Text align="center">Stake is available to savvy investors all over the world</Text>
             </VStack>
 
-            <Show breakpoint='(max-width: 767px)'>
-                <Tabs variant='unstyled' align="center" mt={10}>
-                    <TabList>
-                        <Tab 
-                        _selected={{ 
-                            color: 'white', 
-                            bg: 'green.500' 
-                            }}
-                        sx={{
-                            borderRadius: 4
+            <Tabs variant='unstyled' align="center" mt={10}>
+                <TabList>
+                    <Tab 
+                    _selected={{ 
+                        color: 'white', 
+                        bg: 'green.500' 
                         }}
-                        mx={2}
-                        onClick={() => {sliderContext?.setEventSignal(0)}}
-                        >
-                            Browse
-                        </Tab>
-                        <Tab 
-                        _selected={{ 
-                            color: 'white', 
-                            bg: 'green.500' 
-                            }}
-                        sx={{
-                            borderRadius: 4
+                    sx={{
+                        borderRadius: 4
+                    }}
+                    mx={2}
+                    onClick={() => {sliderContext?.setEventSignal(0)}}
+                    >
+                        Browse
+                    </Tab>
+                    <Tab 
+                    _selected={{ 
+                        color: 'white', 
+                        bg: 'green.500' 
                         }}
-                        mx={2}
-                        onClick={() => {sliderContext?.setEventSignal(1)}}
-                        >
-                            Purchase
-                        </Tab>
-                        <Tab 
-                        _selected={{ 
-                            color: 'white', 
-                            bg: 'green.500' 
-                            }}
-                        sx={{
-                            borderRadius: 4
+                    sx={{
+                        borderRadius: 4
+                    }}
+                    mx={2}
+                    onClick={() => {sliderContext?.setEventSignal(1)}}
+                    >
+                        Purchase
+                    </Tab>
+                    <Tab 
+                    _selected={{ 
+                        color: 'white', 
+                        bg: 'green.500' 
                         }}
-                        mx={2}
-                        onClick={() => {sliderContext?.setEventSignal(2)}}
-                        >
-                            Own
-                        </Tab>
-                        <Tab 
-                        _selected={{ 
-                            color: 'white', 
-                            bg: 'green.500' 
-                            }}
-                        sx={{
-                            borderRadius: 4
+                    sx={{
+                        borderRadius: 4
+                    }}
+                    mx={2}
+                    onClick={() => {sliderContext?.setEventSignal(2)}}
+                    >
+                        Own
+                    </Tab>
+                    <Tab 
+                    _selected={{ 
+                        color: 'white', 
+                        bg: 'green.500' 
                         }}
-                        mx={2}
-                        onClick={() => {sliderContext?.setEventSignal(3)}}
-                        >
-                            Exit
-                        </Tab>
-                    </TabList>
-                    <TabPanels>
-                    {content.map((item, index) => (
-                        <TabPanel>
-                            <Heading as='h4' size='md' mb={5}>{item.title}</Heading>
-                            <Text>{item.text}</Text>
-                        </TabPanel>
-                    ))}
-                    </TabPanels>
+                    sx={{
+                        borderRadius: 4
+                    }}
+                    mx={2}
+                    onClick={() => {sliderContext?.setEventSignal(3)}}
+                    >
+                        Exit
+                    </Tab>
+                </TabList>
+                <TabPanels>
+                    <TabPanel>
+                    <p>one!</p>
+                    </TabPanel>
+                    <TabPanel>
+                    <p>two!</p>
+                    </TabPanel>
+                    <TabPanel>
+                    <p>three!</p>
+                    </TabPanel>
+                    <TabPanel>
+                    <p>four!</p>
+                    </TabPanel>
+                </TabPanels>
                 </Tabs>
-            </Show>
 
-            <Hide breakpoint='(max-width: 767px)'>
+            <Show breakpoint='(max-width: 767px)'>
                 <HStack mt={10}>
                     <Box className={styles.workBox} onClick={() => {sliderContext?.setEventSignal(0)}}>
                         <VStack align="baseline" pr={4}>
@@ -151,7 +155,7 @@ function Controller() {
                         </VStack>
                     </Box>
                 </HStack>
-            </Hide>    
+            </Show>    
         </Box>
     )
 }

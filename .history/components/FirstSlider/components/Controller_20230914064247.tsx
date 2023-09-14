@@ -53,7 +53,7 @@ function Controller() {
                 <Text align="center">Stake is available to savvy investors all over the world</Text>
             </VStack>
 
-            <Show breakpoint='(max-width: 767px)'>
+            <Hide breakpoint='(max-width: 767px)'>
                 <Tabs variant='unstyled' align="center" mt={10}>
                     <TabList>
                         <Tab 
@@ -118,9 +118,9 @@ function Controller() {
                     ))}
                     </TabPanels>
                 </Tabs>
-            </Show>
+            </Hide>
 
-            <Hide breakpoint='(max-width: 767px)'>
+            <Show breakpoint='(max-width: 767px)'>
                 <HStack mt={10}>
                     <Box className={styles.workBox} onClick={() => {sliderContext?.setEventSignal(0)}}>
                         <VStack align="baseline" pr={4}>
@@ -151,7 +151,7 @@ function Controller() {
                         </VStack>
                     </Box>
                 </HStack>
-            </Hide>    
+            </Show>    
         </Box>
     )
 }

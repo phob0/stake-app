@@ -110,7 +110,7 @@ export default function Carousel({ controllerSignal } : any) {
           >
 
             <Center>
-              <Show breakpoint='(max-width: 767px)'>
+              <Show breakpoint='(min-width: 767px)'>
                   <Box
                     key={index}
                     height={800}

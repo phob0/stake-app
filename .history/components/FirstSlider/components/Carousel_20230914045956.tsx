@@ -19,7 +19,6 @@ import {
   HStack,
   Flex,
   SimpleGrid,
-  Hide,
   Show
 } from '@chakra-ui/react'
 // Here we have used react-icons package for the icons
@@ -110,72 +109,51 @@ export default function Carousel({ controllerSignal } : any) {
           >
 
             <Center>
-              <Show breakpoint='(max-width: 767px)'>
-                  <Box
-                    key={index}
-                    height={800}
-                    width={400}
-                    backgroundImage={`url(${item.image})`}
-                    backgroundSize="cover"
-                    backgroundRepeat="no-repeat"
-                  >
-                    <Box
-                      key={index}
-                      height={821}
-                      width={400}
-                      backgroundImage={`url(${frame})`}
-                      backgroundSize="contain"
-                      backgroundRepeat="no-repeat"
-                      ml={"-11px"}
-                    />
-                  </Box>
-              </Show>
-
-              <Hide breakpoint='(max-width: 767px)'>
-                <SimpleGrid columns={3}>
-                  
-                      <Card sx={{ 
-                          width: 310, 
-                          height: 250,
-                          right: '-122px',
-                          bottom: '-158px' 
-                        }}>
-                        <CardBody>
-                          <Text>
-                            { item.text }
-                          </Text>
-                        </CardBody> 
-                      </Card>
-                  
-                  <Box
-                    key={index}
-                    height={800}
-                    width={400}
-                    backgroundImage={`url(${item.image})`}
-                    backgroundSize="cover"
-                    backgroundRepeat="no-repeat"
-                  >
-                    <Box
-                      key={index}
-                      height={821}
-                      width={400}
-                      backgroundImage={`url(${frame})`}
-                      backgroundSize="contain"
-                      backgroundRepeat="no-repeat"
-                      ml={"-11px"}
-                    />
-                  </Box>
-
-                    <Card sx={{ width: 144, height: 144, bottom: '-365px' }}>
+              <SimpleGrid columns={3}>
+                <Show breakpoint='(max-width: 767px)'>
+                    <Card sx={{ 
+                        width: 310, 
+                        height: 250,
+                        right: '-122px',
+                        bottom: '-158px' 
+                      }}>
                       <CardBody>
-                        <Image
-                          src={item.icon}
-                        />
+                        <Text>
+                          { item.text }
+                        </Text>
                       </CardBody> 
-                    </Card> 
+                    </Card>
+                </Show>
+                <Box
+                  key={index}
+                  height={800}
+                  width={400}
+                  backgroundImage={`url(${item.image})`}
+                  backgroundSize="cover"
+                  backgroundRepeat="no-repeat"
+                >
+                  <Box
+                    key={index}
+                    height={821}
+                    width={400}
+                    backgroundImage={`url(${frame})`}
+                    backgroundSize="contain"
+                    backgroundRepeat="no-repeat"
+                    ml={"-11px"}
+                  />
+                </Box>
 
-                </SimpleGrid>
-              </Hide>
+                <Show breakpoint='(max-width: 767px)'>
+                  <Card sx={{ width: 144, height: 144, bottom: '-365px' }}>
+                    <CardBody>
+                      <Image
+                        src={item.icon}
+                      />
+                    </CardBody> 
+                  </Card> 
+                </Show>
+
+              </SimpleGrid>
             </Center>
 
           </Box>

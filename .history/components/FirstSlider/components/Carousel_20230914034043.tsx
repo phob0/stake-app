@@ -18,9 +18,7 @@ import {
   Text,
   HStack,
   Flex,
-  SimpleGrid,
-  Hide,
-  Show
+  SimpleGrid
 } from '@chakra-ui/react'
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
@@ -56,7 +54,7 @@ export default function Carousel({ controllerSignal } : any) {
   // These are the images used in the slide
   const cards = [
     {
-      text: "Our team of property professionals combine a data driven valuation and analysis process with over 20 years of leadership experience at the top real estate companies in Dubai, to source the best rental properties with the highest investment potential for you.",
+      text: '',
       image: '/carousel_browse.svg',
       icon: '/browse_icon.svg'
     },
@@ -99,7 +97,7 @@ export default function Carousel({ controllerSignal } : any) {
       />
       {/* Slider */}
       <Slider {...settings} ref={(slider: any) => setSlider(slider)}>
-        {cards.map((item, index) => (
+        {cards.map((url, index) => (
           <Box
             key={index}
             height={'6xl'}
@@ -110,72 +108,49 @@ export default function Carousel({ controllerSignal } : any) {
           >
 
             <Center>
-              <Show breakpoint='(max-width: 767px)'>
+              <SimpleGrid columns={3}>
+
+                <Card sx={{ 
+                    width: 310, 
+                    height: 250,
+                    right: '-122px',
+                    bottom: '-158px' 
+                  }}>
+                  <CardBody>
+                    <Text>
+                    We work to sell all of our assets at a significantly higher valuation than the purchase price, with investors voting to accept or reject any offers we receive. You can also resell your Stakes during Exit windows, but we do recommend a holding period of 5 years in order to maximise your return
+                    </Text>
+                  </CardBody> 
+                </Card>
+
+                <Box
+                  key={index}
+                  height={800}
+                  width={400}
+                  backgroundImage={`url(${url})`}
+                  backgroundSize="cover"
+                  backgroundRepeat="no-repeat"
+                >
                   <Box
                     key={index}
-                    height={800}
+                    height={821}
                     width={400}
-                    backgroundImage={`url(${item.image})`}
-                    backgroundSize="cover"
+                    backgroundImage={`url(${frame})`}
+                    backgroundSize="contain"
                     backgroundRepeat="no-repeat"
-                  >
-                    <Box
-                      key={index}
-                      height={821}
-                      width={400}
-                      backgroundImage={`url(${frame})`}
-                      backgroundSize="contain"
-                      backgroundRepeat="no-repeat"
-                      ml={"-11px"}
+                    ml={"-11px"}
+                  />
+                </Box>
+
+                <Card sx={{ width: 144, height: 144, bottom: '-365px' }}>
+                  <CardBody>
+                    <Image
+                      src="browse_icon.svg"
                     />
-                  </Box>
-              </Show>
+                  </CardBody> 
+                </Card> 
 
-              <Hide breakpoint='(max-width: 767px)'>
-                <SimpleGrid columns={3}>
-                  
-                      <Card sx={{ 
-                          width: 310, 
-                          height: 250,
-                          right: '-122px',
-                          bottom: '-158px' 
-                        }}>
-                        <CardBody>
-                          <Text>
-                            { item.text }
-                          </Text>
-                        </CardBody> 
-                      </Card>
-                  
-                  <Box
-                    key={index}
-                    height={800}
-                    width={400}
-                    backgroundImage={`url(${item.image})`}
-                    backgroundSize="cover"
-                    backgroundRepeat="no-repeat"
-                  >
-                    <Box
-                      key={index}
-                      height={821}
-                      width={400}
-                      backgroundImage={`url(${frame})`}
-                      backgroundSize="contain"
-                      backgroundRepeat="no-repeat"
-                      ml={"-11px"}
-                    />
-                  </Box>
-
-                    <Card sx={{ width: 144, height: 144, bottom: '-365px' }}>
-                      <CardBody>
-                        <Image
-                          src={item.icon}
-                        />
-                      </CardBody> 
-                    </Card> 
-
-                </SimpleGrid>
-              </Hide>
+              </SimpleGrid>
             </Center>
 
           </Box>
