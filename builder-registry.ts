@@ -55,3 +55,47 @@ Builder.registerComponent(
     name: "FirstSliderController",
   }
 );
+
+Builder.registerComponent(
+  dynamic(() => import("./components/SecondSlider/SecondSlider")),
+  {
+    name: "SecondSlider",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(
+    () => import("./components/InvestmentCalculator/InvestmentController")
+  ),
+  {
+    name: "InvestmentController",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/ThirdSlider/components/CardSlider")),
+  {
+    name: "CardSlider",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/ThirdSlider/ThirdSlider")),
+  {
+    name: "ThirdSlider",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Reward/RewardSlider")),
+  {
+    name: "RewardSlider",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Reward/RewardStats")),
+  {
+    name: "RewardStats",
+  }
+);

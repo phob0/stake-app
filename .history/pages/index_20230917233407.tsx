@@ -12,19 +12,11 @@ export const getStaticProps = async (context: any) => {
     const hero = await builder.get('hero', { url: context.resolvedUrl });
     const first_slider = await builder.get('first-slider', { url: context.resolvedUrl });
     const first_statics = await builder.get('first-statics', { url: context.resolvedUrl });
-    const second_slider = await builder.get('second-slider', { url: context.resolvedUrl });
-    const investment_calculator = await builder.get('investment-calculator', { url: context.resolvedUrl });
-    const third_slider = await builder.get('third-slider', { url: context.resolvedUrl });
-    const second_statics = await builder.get('second-statics', { url: context.resolvedUrl });
-
+    // console.log('content', content.data.blocks[0])
     return { props: {
         hero: hero || null,
         first_slider: first_slider || null, 
         first_statics: first_statics || null,
-        second_slider: second_slider || null, 
-        investment_calculator: investment_calculator || null,
-        third_slider: third_slider || null,  
-        second_statics: second_statics || null,
     }}
   }
 
@@ -40,18 +32,7 @@ export default function Home( props : any ) {
             <div id="first-statics">
                 <BuilderComponent content={props.first_statics} model="first-statics" />
             </div>
-            <div id="second-slider">
-                <BuilderComponent content={props.second_slider} model="second-slider" />
-            </div>
-            <div id="investment-calculator">
-                <BuilderComponent content={props.investment_calculator} model="investment-calculator" />
-            </div>
-            <div id="third-slider">
-                <BuilderComponent content={props.third_slider} model="third-slider" />
-            </div>
-            <div id="second-statics">
-                <BuilderComponent content={props.second_statics} model="second-statics" />
-            </div>
+            
         </>
     )
 }

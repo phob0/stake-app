@@ -1,0 +1,7 @@
+
+
+function ThirdSlider() {
+    return ()
+}
+
+export default ThirdSlider

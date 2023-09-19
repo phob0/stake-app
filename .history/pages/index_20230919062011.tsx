@@ -15,7 +15,6 @@ export const getStaticProps = async (context: any) => {
     const second_slider = await builder.get('second-slider', { url: context.resolvedUrl });
     const investment_calculator = await builder.get('investment-calculator', { url: context.resolvedUrl });
     const third_slider = await builder.get('third-slider', { url: context.resolvedUrl });
-    const second_statics = await builder.get('second-statics', { url: context.resolvedUrl });
 
     return { props: {
         hero: hero || null,
@@ -24,7 +23,6 @@ export const getStaticProps = async (context: any) => {
         second_slider: second_slider || null, 
         investment_calculator: investment_calculator || null,
         third_slider: third_slider || null,  
-        second_statics: second_statics || null,
     }}
   }
 
@@ -45,12 +43,6 @@ export default function Home( props : any ) {
             </div>
             <div id="investment-calculator">
                 <BuilderComponent content={props.investment_calculator} model="investment-calculator" />
-            </div>
-            <div id="third-slider">
-                <BuilderComponent content={props.third_slider} model="third-slider" />
-            </div>
-            <div id="second-statics">
-                <BuilderComponent content={props.second_statics} model="second-statics" />
             </div>
         </>
     )
