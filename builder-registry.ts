@@ -99,3 +99,10 @@ Builder.registerComponent(
     name: "RewardStats",
   }
 );
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Footer/Footer")),
+  {
+    name: "Footer",
+  }
+);

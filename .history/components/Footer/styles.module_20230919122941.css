@@ -1,0 +1,11 @@
+.footerLink {
+    color: #A3ABBA;
+    font-weight: 200!important;
+}
+
+.footerLink:hover {
+    color: 'white';
+    text-decoration-color: '#49ef8b';
+    text-decoration-thickness: '3px';
+    text-underline-offset: '5px'
+}

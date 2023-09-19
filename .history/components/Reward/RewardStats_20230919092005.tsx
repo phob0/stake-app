@@ -14,8 +14,7 @@ import {
     Image
  } from '@chakra-ui/react'
 
- import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
-
+ import { BiCheck, BiX } from 'react-icons/bi'
 
 function RewardStats() {
     return (
@@ -35,30 +34,11 @@ function RewardStats() {
                 </HStack>
                 <VStack align={'start'} py={5}>
                     <HStack mt={3}>
-                        <CheckIcon
-                            boxSize={26}
+                        <BiCheck
+                            size={'md'}
                             color='green.300'
                         />
-                        <Text fontSize={'1.3em'}>$500 for each qualified referral</Text>
-                    </HStack>
-                </VStack>
-                <VStack align={'start'} py={5}>
-                    <HStack mt={3}>
-                        <CheckIcon
-                            boxSize={26}
-                            color='green.300'
-                        />
-                        <Text fontSize={'1.3em'}>1% cashback equivalent on every investment</Text>
-                    </HStack>
-                </VStack>
-                <VStack align={'start'} py={5}>
-                    <HStack mt={3}>
-                        <CloseIcon
-                            boxSize={21}
-                            color='gray.300'
-                            mr={1}
-                        />
-                        <Text fontSize={'1.3em'}>1% cashback equivalent on every investment</Text>
+                        <Text>$ 500 for each qualified referral</Text>
                     </HStack>
                 </VStack>
             </CardBody>

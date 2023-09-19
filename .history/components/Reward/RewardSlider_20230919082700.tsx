@@ -14,12 +14,7 @@ import {
 function RewardSlider() {
     return (
         <Box>
-            <Heading p={5} pr={'30%'} mt={2} as='h2' size='2xl'>Get rewarded as you invest</Heading>
-                
-                <Text p={5}>
-                The more you invest, the more you get! All investors are automatically enrolled in our membership club, with rewards starting from only AED 500 invested
-                </Text>
-                
+            <Heading p={5} mt={2} as='h2' size='2xl'>Get rewarded as you invest</Heading>
                 <Box p={5}>
                     <HStack justify={'space-between'}>
                         <Text fontSize='md' mb={2}>

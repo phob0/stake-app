@@ -54,9 +54,8 @@ function RewardStats() {
                 <VStack align={'start'} py={5}>
                     <HStack mt={3}>
                         <CloseIcon
-                            boxSize={21}
+                            boxSize={23}
                             color='gray.300'
-                            mr={1}
                         />
                         <Text fontSize={'1.3em'}>1% cashback equivalent on every investment</Text>
                     </HStack>

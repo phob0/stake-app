@@ -39,26 +39,7 @@ function RewardStats() {
                             boxSize={26}
                             color='green.300'
                         />
-                        <Text fontSize={'1.3em'}>$500 for each qualified referral</Text>
-                    </HStack>
-                </VStack>
-                <VStack align={'start'} py={5}>
-                    <HStack mt={3}>
-                        <CheckIcon
-                            boxSize={26}
-                            color='green.300'
-                        />
-                        <Text fontSize={'1.3em'}>1% cashback equivalent on every investment</Text>
-                    </HStack>
-                </VStack>
-                <VStack align={'start'} py={5}>
-                    <HStack mt={3}>
-                        <CloseIcon
-                            boxSize={21}
-                            color='gray.300'
-                            mr={1}
-                        />
-                        <Text fontSize={'1.3em'}>1% cashback equivalent on every investment</Text>
+                        <Text fontSize={'1.3em'} fontWeight={'100'}>$500 for each qualified referral</Text>
                     </HStack>
                 </VStack>
             </CardBody>

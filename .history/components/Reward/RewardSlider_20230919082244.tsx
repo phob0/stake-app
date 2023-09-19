@@ -7,28 +7,17 @@ import {
     SliderFilledTrack,
     SliderThumb,
     SliderMark,
-    Text,
-    HStack
+    Text
  } from '@chakra-ui/react'
 
 function RewardSlider() {
     return (
         <Box>
-            <Heading p={5} pr={'30%'} mt={2} as='h2' size='2xl'>Get rewarded as you invest</Heading>
-                
-                <Text p={5}>
-                The more you invest, the more you get! All investors are automatically enrolled in our membership club, with rewards starting from only AED 500 invested
-                </Text>
-                
+            <Heading p={5} mt={2} as='h4' size='md'>How much do you want to invest?</Heading>
                 <Box p={5}>
-                    <HStack justify={'space-between'}>
-                        <Text fontSize='md' mb={2}>
-                            How much do you want to invest?
-                        </Text>
-                        <Text as='b' fontSize='2xl' mb={2}>
-                            230,000 $
-                        </Text>
-                    </HStack>
+                    <Text fontSize='md' mb={2}>
+                        Initial Investment
+                    </Text>
                     <Slider 
                         defaultValue={30} 
                         colorScheme="green"
@@ -46,6 +35,10 @@ function RewardSlider() {
                         />
                     </Slider>
                 </Box>
+
+                <Text fontSize={'xs'} my={5} px={5}>
+                    All projected values are before any property costs and platform fees, and based on a 5-year holding period. We expect the asset value to grow 30% over the next 5 years.
+                </Text>
         </Box>
     )
 }
