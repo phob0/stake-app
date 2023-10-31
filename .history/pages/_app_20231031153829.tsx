@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app'
 import Layout from './layout'
 import { ChakraProvider } from '@chakra-ui/react'
 
-const App = ({ Component, pageProps }: AppProps) => {
+export default function App({ Component, pageProps }: AppProps) {
     return (
         <ChakraProvider>
             <Layout>
@@ -11,5 +11,3 @@ const App = ({ Component, pageProps }: AppProps) => {
         </ChakraProvider>
     )
 }
-
-export default App;
